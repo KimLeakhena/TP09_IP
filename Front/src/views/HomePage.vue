@@ -7,7 +7,7 @@
         <p>{{category.name}}</p>
         <ul>
           <li v-for="item in category?.item" :key="item._id">
-            <span @click="onclick(item._id)">{{subcategory.subcategory_name}}</span>
+            <span @click="onclick(item._id)">{{item.name}}</span>
           </li>
         </ul>
       </div>
@@ -15,7 +15,7 @@
     <div class="items">
       <div class="box" v-for="product in products" :key="product._id">
         <div>
-          <img src="../../public/img.png" />
+          <img src="../assets/1.jpg" />
                {{product.imageUrl }}
         </div>
        
@@ -69,8 +69,8 @@ export default {
 <style>
 header {
   width: 100%;
-  height: 80px;
-  background: #000;
+  height: 60px;
+  background: #cca0a0;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -89,10 +89,10 @@ main {
 main .sidebar {
   padding: 10px;
   height: calc(100vh - 80px);
-  width: 180px;
+  width: 200px;
   border: 1px solid black;
   position: fixed;
-  top: 80px;
+  top: 50px;
   left: 0;
 }
 main .sidebar .category {
